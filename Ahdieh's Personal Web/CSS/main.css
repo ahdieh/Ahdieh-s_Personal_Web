@@ -1,0 +1,231 @@
+﻿body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:medium;
+    font-weight:bold;
+    line-height:25px;
+    background-color:#fffbeb;
+    margin-right:auto;
+    margin-left:auto;
+}
+#Biography {
+    background-image: url('../images/images_back.jpg'); 
+    background-repeat:repeat-y;
+    background-size:cover;
+}
+#Biography img{
+max-width:100%;
+    height:inherit;
+}
+#Biography img.bg {
+    width:100%;
+    height:100%;
+}
+#header{
+text-align:center;
+width:100%;
+position:relative;
+top:20px;
+margin-bottom:20px;
+
+}
+#header a{
+ background-color:#fffbeb;
+ border:none;
+}
+#banner{
+width:60%;
+height:inherit;
+}
+#myPicture{
+position:absolute;
+top:20%;
+left:15%;
+width:15%;
+height:inherit;
+float:right;
+}
+#buttons{
+    margin:1% 5%;
+}
+button{
+    color:#000000;
+    background-color:#F7BE81;
+    margin-right:10px;
+}
+#par {
+    text-align:left;
+    font-size:large;
+    margin-top:3%;
+    line-height:25px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#family{
+    width:40%;
+    height:inherit;
+    padding:20px 10%;
+    margin-left:auto;
+    margin-right:auto;
+}
+a{
+  
+    text-decoration: none;
+    color:#000000;
+    background-color:#F7BE81;
+    margin-right:10px;
+    font-size:medium;
+    font-weight:bold;
+   border:1px solid black;
+}
+a:hover{
+background-color:#df838c;
+
+}
+#span{
+    padding:1%;
+}
+#hobbiesImage{
+    width:20%;
+    height:inherit;
+    margin-left:auto;
+    margin-right:auto;
+}
+h3{
+    color:#7b1216;
+}
+#hobbies{
+    margin-top:20px;
+    margin-left:10%;
+}
+#List {
+     list-style-image: url('../images/bullet_green.png');
+}
+#Education {
+    background-image: url('../images/images03KOZ2TD.jpg');
+}
+#par1{
+    color:white;
+      text-align:left;
+    font-size:large;
+    margin-top:3%;
+    line-height:25px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#T{
+    margin:15px 25px;
+}
+#select{
+color:#000000;
+    background-color:#F7BE81;
+    margin-right:10px;
+    font-size:medium;
+    font-weight:bold;
+   border:1px solid black;
+}
+#currentDate{
+  float:left;
+}
+#currentTime{
+    float:left;
+    margin-left:10%;
+}
+#date{
+    margin:30px 10%;
+       width:100%;
+}
+#banner1{
+    width:100%;
+height:inherit;
+}
+#productImage{
+   float: left;
+    width: 30%;
+    margin: 1% 5% 1% 0;
+
+}
+#product{
+float:left;
+      margin:30px 5%;
+      border:2px solid black;
+      padding:10px;
+      width:100%;
+}
+#description{
+    margin-top:25px;
+       padding: 10%;
+}
+
+#brand{
+float:left;
+      margin:30px 5%;
+      padding:10px;
+      color:#ff6a00;
+       width:100%;
+}
+footer{
+    font-weight:normal;
+    margin-top:10px;
+}
+
+#body3 {
+    background-image: url('../images/asus-rog-wallpaper-3d (1).jpg');
+    color:#fcfcfc;
+}
+#Form{
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#847966;
+    width:50%;
+    padding-top:10px;
+    padding-bottom:30px;
+     text-align:center;
+}
+#header3{
+   
+    margin-top:20px;
+     margin-bottom:20px;
+     height:120px;
+}
+#title{
+    text-align:center;
+    background-color:#fcfcfc;
+    color:#847966;
+}
+#table{
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#table input{
+    border:1px solid #2a2a2a;
+    margin-left:15px;
+}
+#table select{
+  border:1px solid #2a2a2a;
+}
+#table label{
+   color:#fcfcfc;
+}
+#table tr td{
+   
+}
+
+#validate{
+    width:70px;
+    height:70px;
+}
+#T4{
+    margin:0 10px;
+}
+
+#T4 img{
+       width:50px;
+        height:inherit;
+}
+#F4{
+margin-top:0;
+}
+

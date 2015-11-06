@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahdieh's Assignment 3 - Ahdieh Emadi - COMP229 Assignment3</title>
+    <script language="javascript" type="text/javascript">
+
+        //***************VALIDATION***************************
+
+        function submitBotton_Click() {
+            
+            //Validate the First Name
+
+            firstName = document.getElementById("firstName");
+            if (firstName.value == "") {
+                alert("Please enter your First Name.")
+                firstName.focus()
+                return false
+            }
+
+            //Validate the Last Name
+
+            lastName = document.getElementById("lastName")
+            if (lastName.value == "") {
+                alert("Please enter your Last Name.")
+                lastName.focus()
+                return false
+            }
+
+            //Validate the Address
+
+            address = document.getElementById("address")
+            if (address.value == "") {
+                alert("Please enter your Address.")
+                address.focus()
+                return false
+            }
+
+            //Validate the City
+
+            city = document.getElementById("city")
+            if (city.value == "") {
+                alert("Please enter your City.")
+                city.focus()
+                return false
+            }
+
+            // Validate Postal Code
+
+            code = document.getElementById("postalCode")
+            if (code.value == "") {
+                alert("Please enter your postal Code. ")
+                code.focus()
+                return false
+            }
+
+            else {
+                postalCode = document.getElementById("postalCode")
+                code = RegExp(/([abceghjklmnprstvxy]\d[abceghjklmnprstvwxyz]\d[abceghjklmnprstvwxyz]\d)/i)
+                if (!code.test(postalCode.value)) {
+                    alert("Please enter your postal Code as a0a0a0. ")
+                    postalCode.value = ""
+                    postalCode.focus()
+                    return false
+                }
+            }
+            
+         
+            //Validate the Province
+
+             province = document.getElementById("province")   
+            if (province.value == "0") {
+                alert("Please select your Province.")
+                province.focus()
+                return false
+            }
+
+            // Validate age
+
+            age = document.getElementById("age")
+            if (age.value == "") {
+                alert("Please enter your age.")
+                age.focus()
+                return false
+            }
+               
+             else if (age.value < 18) {
+                 alert("You are too young to register.")
+                 age.value = ""
+                 age.focus()
+                 return false
+            }
+                
+         
+            //Validate the Password
+
+            password = document.getElementById("password")
+            if (password.value == "") {
+                alert("Please enter a Password. ")
+                password.focus()
+                return false
+            }
+            else {
+                password = document.getElementById("password")
+                pwd = new RegExp(/^(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9]{6,}$/)
+                if (!pwd.test(password.value)) {
+                    alert("The Password should have at least 6 characters and must contain at least one digit and one upper-case character.")
+                    password.value = ""
+                    password.focus()
+                    return false
+                }
+            }
+
+            //Validate the Confirmation
+
+            confirm = document.getElementById("confirm")
+            if (confirm.value == "") {
+                alert("Please confirm the Password .")
+                confirm.focus()
+                return false
+            }
+            else {
+                if (confirm.value != password.value) {
+                    alert("It does not match to password you entered.")
+                    confirm.value = ""
+                    confirm.focus()
+                    return false
+                }
+            }
+
+            //Validate the Email
+
+            email = document.getElementById("email")
+            if (email.value == "") {
+                alert("Please enter your Email.")
+                email.focus()
+                return false
+            }
+            else {
+                if (email.value.indexOf(".") == -1 || email.value.indexOf("@") == -1 || email.value.indexOf("@") > email.value.indexOf(".")) {
+                    alert("Your email address is not in a valid format.")
+                    email.value = ""
+                    email.focus()
+                    return false
+                }
+            }
+
+            //Confirm Registration
+
+            alert("Your registration has be done suuccessfully.Thanks to create an account at this webste.")
+            clearForm()
+            return true
+        }
+
+        function clearForm(){
+            firstName.value = ""
+            lastName.value = ""
+            address.value = ""
+            city.value = ""
+            postalCode.value = ""
+            province.value = "0"
+            age.value = ""
+            password.value = ""
+            confirm.value = ""
+            email.value = ""
+        }
+    </script>
+    <!--CSS Section-->
+    <link href="CSS/main.css" rel="stylesheet" />
+</head>
+<body id="body3">
+    <header>
+        <div id="header3">
+            <img id="banner1" src="images/registration_banner.jpg" />
+
+            
+        </div>
+    </header>
+    <main>
+        <div id="buttons">
+            <a href="index.html"><span id="span">Homepage</span></a>
+        </div>
+        <div id="Form">
+            <h1>Membership Form</h1>
+            <h2 id="title">Please complete all the fields:</h2>
+            <div id="table">
+                <form method="post" action="javascript:alert('Complete!');" id="form">
+                    <table>
+                        <tr>
+                            <td><label for="firstName" />First Name: </td>
+                            <td><input type="text" name="firstName" id="firstName" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lastName" />Last Name: </td>
+                            <td><input type="text" name="lastName" id="lastName" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="address" />Address: </td>
+                            <td><input type="text" name="address" id="address" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city" />City: </td>
+                            <td><input type="text" name="city" id="city" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="postalCode" />Postal Code: </td>
+                            <td><input type="text" name="postalCode" id="postalCode" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="province" />Province: </td>
+                            <td>
+                                <select id="province" name="province">
+                                    <!--onchange="setCities(this);"-->
+                                    <option value="0">*Select the Province:</option>
+                                    <option value="Alberta">AB</option>
+                                    <option value="British Columbia">BC</option>
+                                    <option value="Manitoba">MB</option>
+                                    <option value="Ontario">ON</option>
+                                    <option value="Quebec">QC</option>
+                                    <option value="Saskatchewan">SK</option>
+                                </select>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="age" />Age: </td>
+                            <td><input type="text" name="age" id="age" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password" />Password: </td>
+                            <td><input type="password" name="password" id="password" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="confirm" />Confirm: </td>
+                            <td><input type="password" name="confirm" id="confirm" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email" />Email: </td>
+                            <td><input type="text" name="email" id="email" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="image"  id="validate"
+src="images/register-banner.png" onclick="return submitBotton_Click()" alt="Submit"/></td>
+                            <td><input type="reset" value="Reset Form" /></td>
+
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
+        </div>
+        <div id="T">
+            <a href="#top"><span id="span">top of page</span></a>
+        </div>
+    </main>
+    <div id="footer">
+        <footer>
+            <br />
+            <hr size="4" color="olive">
+            <h5>&copy;&nbsp;Copyright Centennial College - Student Name: Ahdieh Emadi - Student# 300819766 - COMP229-005 - Advance web application development - fall 2015 - All rights reserved</h5>
+            <hr size="4" color="olive">
+        </footer>
+    </div>
+</body>
+</html>
+

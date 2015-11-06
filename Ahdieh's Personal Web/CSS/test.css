@@ -1,0 +1,59 @@
+﻿body {
+    background-color:#fef0b8;
+    
+}
+#logo{
+      text-align:left;
+float:left;
+   padding-right:250px;
+   margin-left:20px;
+
+}
+#form{
+width:60%;
+height:inherit;
+margin-right:auto;
+    margin-left:auto;
+    border:5px solid #f76e0d;
+}
+#company{
+
+ color:#f76e0d;
+
+}
+#header{
+    height:200px;
+}
+a{
+  
+    text-decoration: none;
+    color:#000000;
+    background-color:#F7BE81;
+    margin-right:10px;
+    font-size:medium;
+    font-weight:bold;
+   border:1px solid black;
+   width:80px;
+}
+    a:hover {
+        background-color: #df838c;
+    }
+    input{
+        width:160px
+    }
+#submit{
+     background-color:#F7BE81;
+}
+
+#reset{
+     background-color:#F7BE81;
+}
+#expiryYear{
+ margin-right:10px;
+ width:50px;
+}
+#expiryMonth{
+    margin-left:10px;
+    width:50px;
+}
+

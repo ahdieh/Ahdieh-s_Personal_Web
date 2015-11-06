@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahdieh's Assignment 2 - Ahdieh Emadi -COMP229 Assignment2 </title>
+    <!--CSS Section-->
+    <link href="CSS/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="header">
+            <a title="See the details of this product" href="http://www.bestbuy.ca/en-CA/product/asus-asus-zenbook-ux305-13-3-ultrabook-gold-intel-core-m-5y10-256gb-ssd-8gb-ram-windows-8-1-ux305fa-bbm1-cb/10380387.aspx?path=6f1fa05130d307e466a32640e3b13e38en02">
+
+
+                <img id="banner1" src="images/banner_live_beyond_the_spectrum.jpg" />
+            </a>
+        </div>
+    </header>
+    <div>
+        <main>
+            <div id="buttons">
+                <a href="index.html"><span id="span">Homepage</span></a>
+            </div>
+            <div id="date">
+                <div id="currentDate">
+                    <script>
+                        var months = new Array("January", "February", "March",
+                     "April", "May", "June", "July", "August", "September",
+                     "October", "November", "December");
+                        var currentDate = new Date()
+                        var month = months[currentDate.getMonth()]
+                        var day = currentDate.getDate()
+                        var year = currentDate.getFullYear()
+                        function getOrdinal(n) {
+                            var ordinal = ["st", "nd", "rd", "th"];
+                            var i
+                            switch (n) {
+                                case 1:
+                                    i = 0;
+                                    break;
+                                case 2:
+                                    i = 1;
+                                    break;
+                                case 3:
+                                    i = 2;
+                                    break;
+                                default:
+                                    i = 3;
+                                    break;
+                            }
+                            return ordinal[i];
+                        }
+                        document.write("Current Date: " + month + " " + day + getOrdinal(day) + ",  " + year);
+                    </script>
+                </div>
+                <div id="currentTime">
+                    <script>
+                        var currentTime = new Date()
+                        var hours = currentTime.getHours()
+                        var minutes = currentTime.getMinutes()
+                        var seconds = currentTime.getSeconds()
+                        if (minutes < 10) {
+                            minutes = "0" + minutes
+                        }
+                        if (seconds < 10) {
+                            seconds = "0" + seconds
+                        }
+                        document.write("Current Time: " + hours + ":" + minutes + ":" + seconds)
+
+                    </script>
+                </div>
+            </div>
+
+            <div id="product">
+                <img id="productImage" src="images/p1_1_img.png" />
+
+
+                <h1>LAPTOPS</h1>
+                <h3>ASUS ZENBOOK UX305FA</h3>
+                <p>
+                    Wherever you go, you'll be connected, productive, and entertained thanks to this 13" laptop from ASUS. Featuring a beautiful Full HD screen for stunning visuals, this unit packs an Intel Core M-5Y10 processor, 8GB RAM, and a 256GB solid state drive into a sleek and compact design. It also sports built-in WiFi and Bluetooth for effortless connectivity.The ASUS ZenBook UX305 puts all the power into it's slim and compact design, weighing only 2.6 lbs and measuring a mere 0.5-inch thin.The light and agile UX305 epitomizes elegance with its two chic finishes and subtle diamond-cut edges that further highlight its understated beauty – Obsidian Stone with spun-metal hairline details or Titanium Gold.ZenBook UX305's balanced design is more than simply beautiful – it's a performance stunner. With 8GB of fast memory, lightning-speed solid-state drive and an efficient Intel® Core™ M processor, you're never left waiting.<br /><span style="color:red; font-weight:bold;">$899.99</span><br /><br />
+                    <a href="Specifications.html">Specifications</a>
+                </p>
+
+                <form action="" name="form1">
+
+                    <select>
+                        <option default>Qty</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select>
+                        <option default>Select Color</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Dark grey">Dark grey</option>
+
+                    </select>
+                    <input type="submit" value="Add to Cart">
+
+                </form>
+
+            </div>
+            <div id="brand">
+                <h3><br />Your favourite brand is: </h3>
+                <p id="Brand"></p>
+                <script>
+                    var Brand = document.getElementById("Brand");
+                    var faveBrand = "";
+                    var brand = prompt("What is your favorite brand of laptops?", "none");
+                    var number = 0;
+                    number = prompt("On a scale of 1 to 100, how much do you like it?", "80");
+
+                    for (var i = 0; i < number; i++) {
+                        faveBrand = faveBrand + brand + " ";
+
+                    }
+                    Brand.innerHTML = faveBrand;
+
+                </script>
+                <div id="T">
+                    <a href="#top"><span id="span">top of page</span></a>
+                </div>
+            </div>
+          
+        </main>
+    </div>
+    <div id="footer">
+        <footer>
+            <br />
+            <hr size="4" color="olive">
+            <h5>&copy;&nbsp;Copyright Centennial College - Student Name: Ahdieh Emadi - Student# 300819766 - COMP229-005 - Advance web application development - fall 2015 - All rights reserved</h5>
+            <hr size="4" color="olive">
+        </footer>
+    </div>
+</body>
+</html>

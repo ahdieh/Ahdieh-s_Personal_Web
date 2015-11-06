@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahdieh's Personal Web - Ahdieh Emadi - ahdieh emadi </title>
+    <!--CSS Section-->
+ 
+    <link href="CSS/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="header">
+            <a  title="See Toronto on wiki" href="http://en.wikipedia.org/wiki/Toronto">
+                <img id="banner" src="images/images47HVQ0TR.jpg" />
+            </a>
+            <a title="See Ahdieh's biography" href="Biography.html">
+                <img id="myPicture" alt="Ahdieh Emadi" src="images/Ahdieh.jpg" >
+            </a>
+        </div>
+    </header>
+    <main>
+        <div id="buttons">
+            <br />
+            <a href="Biography.html"><span id="span">Biography</span></a>
+            <a href="Education.html"><span id="span">Education</span></a>
+            <a href="300819766Midterm.html"><span id="span">Midterm test</span></a>
+           <a href="300819766ModifiedMidterm.html"><span id="span">Modified Midterm test</span></a>
+           
+            <select id="select">
+                <option value="">Pick an Assignment</option>
+                <option value="index.html">Assignment1</option>
+                <option value="Assignment2.html">Assignment2</option>
+                <option value="assignment3.html">Assignment3</option>
+                <option value="Assignment 4-Game.html">Assignment4</option>
+            </select>
+
+            <script>
+                document.getElementById("select").onchange = function () {
+                    if (this.selectedIndex !== 0) {
+                        window.location.href = this.value;
+                    }
+                };
+            </script>
+        </div>
+       
+
+        <div id="header">
+            <img src="images/logo.gif" />
+            <h4>COMP229-005 - Advance web application development - fall 2015</h4>
+            <h5>Student Name: Ahdieh Emadi | Student Number: 300819766</h5>
+        </div>
+        <div id="header">
+            <img id="hobbiesImage" src="images/Hobbies.gif" />
+        </div>
+       
+        <div id="hobbies">
+            <p>
+                <br />
+                <h1>Some of my favorite activities are:</h1>
+                  <ul id="List">
+                    <li>Programming</li>
+                    <li>Web designing</li>
+                    <li>Listening to music</li>
+                    <li>Spending time with my family and playing with my little daughter </li>
+                    <li>Watching movies</li>
+                    <li>Reading book</li>
+                </ul>
+               
+            </p>
+        </div>
+        <div id="T">
+            <a href="#top"><span id="span">top of page</span></a>
+        </div>
+ 
+    
+      
+    </main>
+
+    <footer>
+        <hr size="4" color="olive">
+        <h5>&copy;&nbsp;Copyright Centennial College - Student Name: Ahdieh Emadi - Student# 300819766 - COMP229-005 - Advance web application development - fall 2015 - All rights reserved</h5>
+        <hr size="4" color="olive">
+    </footer>
+</body>
+</html>

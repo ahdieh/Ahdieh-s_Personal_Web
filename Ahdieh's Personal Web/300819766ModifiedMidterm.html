@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahdieh's Assignment 3 - Ahdieh Emadi - COMP229 Assignment3</title>
+    <script language="javascript" type="text/javascript">
+        function submitBotton_Click() {
+
+            //Validate movie selection
+
+            movie = document.getElementById("movie");
+            if (movie.value == "0") {
+                alert("Please select the movie.")
+                movie.focus()
+                return false
+            }
+            //Validate the show time
+            var time1 = document.getElementsByName("time");
+            var formValid = false;
+
+            var i = 0;
+            while (!formValid && i < time1.length) {
+                if (time1[i].checked) formValid = true;
+                i++;
+            }
+
+            if (!formValid) {
+                alert("Please select the time.");
+
+                return formValid;
+
+            }
+
+
+            //Validate Number of tickets
+
+            numberTicket = document.getElementById("numberTicket");
+            if (numberTicket.value == "") {
+                alert("Please enter a valid Number of tickets.")
+                numberTicket.focus()
+                return false
+            }
+           
+               else if (numberTicket.value < 1 || numberTicket.value > 10) {
+                    alert("Please enter a valid Number of tickets.")
+                    numberTicket.value = ""
+                    numberTicket.focus()
+                    return false
+               }
+               
+          
+
+            //Validate credit card
+
+            var credit = document.getElementsByName("credit");
+            var creditValid = false;
+
+            var i = 0;
+            while (!creditValid && i < credit.length) {
+                if (credit[i].checked) creditValid = true;
+                i++;
+            }
+
+            if (!creditValid) {
+                alert("Please select the credit.");
+
+                return creditValid;
+
+            }
+
+          
+
+
+            //Validate Card Number
+
+            cardNumber = document.getElementById("cardNumber");
+            if (cardNumber.value == "") {
+                alert("Please enter a valid Card Number.")
+                cardNumber.focus()
+                return false
+            }
+            else if (cardNumber.value.length != 16 )
+            {
+                alert("Please enter a 16 digit Card Number.")
+                cardNumber.value= " "
+                cardNumber.focus()
+                return false
+            }
+            //Validate Expiry Year
+
+            expiryYear = document.getElementById("expiryYear");
+            if (expiryYear.value == "") {
+                alert("Please enter a valid Expiry Year.")
+                expiryYear.focus()
+                return false
+            }
+             if(expiryYear.value < 9 )
+            {
+                alert("Please enter a valid Expiry Year.")
+                expiryYear.focus()
+                return false
+             }
+             if (expiryYear.value > 15) {
+                 alert("Please enter a valid Expiry Year.")
+                 expiryYear.focus()
+                 return false
+             }
+            //Validate Expiry Month
+
+            expiryMonth = document.getElementById("expiryMonth");
+            if (expiryMonth.value == "") {
+                alert("Please enter a valid Expiry Month.")
+                expiryMonth.focus()
+                return false
+            }
+            else if(expiryMonth.value < 1 || expiryMonth.value > 12)
+            {
+                alert("Please enter a valid Expiry Month.")
+                expiryMonth.focus()
+                return false
+            }
+
+
+            date = Date();
+            //Confirm Registration
+
+            var c = confirm("You are about to purchase " + numberTicket.value + " tickets for the " + movie.value +" at " + document.getElementById("t").value + ". Do you want to continue?");
+            if (c == true) {
+                c1 = confirm("Your tickets are purchased on " + date + " at " + document.getElementById("t").value + ". Enjoy the show.");
+                if (c1 == true) {
+                    function sendMail() {
+                        window.open('mailto:test@example.com');
+                    }
+                }
+            }
+                        
+                clearForm()
+            
+        }
+
+        function clearForm() {
+         
+            
+            movie.value = "0"
+        
+           document.getElementById("t").checked = false
+           numberTicket.value = ""
+           document.getElementById("credit").checked = false
+           cardNumber.value = ""
+           expiryYear.value = ""
+            expiryMonth.value = ""
+            
+
+        }
+        
+       
+    </script>
+    <!--CSS Section-->
+   <link href="CSS/test.css" rel="stylesheet" />
+</head>
+<body id="body">
+    <header>
+        <div id="header">
+            <img  id="logo" src="images/untitled.png" />
+            <h1 id="company">Movie company</h1>
+
+        </div>
+        
+    </header>
+
+    <main>
+        
+        <div id="buttons">
+            <a href="index.html"><span id="span">Homepage</span></a>
+        </div>
+        <div>
+       
+           
+            <div id="form">
+                <form method="post" action="javascript:alert('Complete!');">
+                    <fieldset>
+                        <h2>Online Ticket Purchase</h2>
+                        <select id="movie" name="movie">
+                         
+                            <option value="0">-Select one-</option>
+                            <option value="Martian">The Martian</option>
+                            <option value="Spectre">Spectre</option>
+                            <option value="The Last Witch Hunter">The Last Witch Hunter</option>
+
+                        </select>
+                          </fieldset>
+                        <fieldset>
+                            <label for="time" />Select Show Time:
+                            <br>
+                            <input type="radio" id="t" name="time" value="2:30" > 2:30
+                            <br>
+                            <input type="radio" id="t" name="time" value="5:30"> 5:30
+                            <br>
+                            <input type="radio"id="t" name="time" value="8:00"> 8:00
+                        </fieldset>
+                        <fieldset>
+                            <label for="numberTicket" />Number of tickets:<br> (value between 1 and 10)
+                            <input type="text" name="numberTicket" id="numberTicket" />
+                        </fieldset>
+                  
+                    <fieldset>
+                        <h2>Payment Mrethod</h2>
+                        <fieldset>
+                            <label for="credit" />credit Card:<br>(Selection required)
+                            <br>
+                            <input type="radio" id="credit" name="credit" value="1" > VISA
+                            <br>
+                            <input type="radio" id="credit" name="credit" value="2"> MC
+                            <br>
+                            <label for="cardNumber" />Card Number:<br>(required, 16-digit value)
+                            <input type="text" name="cardNumber" id="cardNumber" />
+                            <br>
+                            <label for="expiryDate" />Expiry Date(yy / mm):<br>(required, your value between 09 and 15.)
+                            <input  type="text" name="expiryYear" id="expiryYear" />/<input type="text" name="expiryMonth" id="expiryMonth" />
+                        </fieldset>
+                        <br>
+                            <fieldset>
+                                <input id="submit" type="submit" value="Purchase Ticket" onclick="return submitBotton_Click()" />
+                                <input id="reset" type="reset" value="Clear Form" />
+                            </fieldset>
+                    </fieldset>
+</form>
+</div>
+
+        </div>
+        <div id="T">
+            <a href="#top"><span id="span">top of page</span></a>
+        </div>
+        
+    </main>
+    <div id="footer">
+        <footer>
+            <br />
+            <hr size="4" color="olive">
+            <h5>&copy;&nbsp;Copyright Centennial College - Student Name: Ahdieh Emadi - Student# 300819766 - COMP229-005 - Advance web application development - fall 2015 - All rights reserved</h5>
+            <hr size="4" color="olive">
+        </footer>
+    </div>
+ 
+</body>
+</html>
